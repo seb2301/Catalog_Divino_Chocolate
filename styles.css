@@ -1,0 +1,415 @@
+:root {
+    --cor-fundo-principal: #111;
+    --cor-texto: #eee;
+    --cor-destaque: #ffe8af;
+    --cor-cinza: #333;
+    --fonte-principal: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    background-color: #111;
+    color: #eee;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.menu-fixo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000;
+    z-index: 9999;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-fixo nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0 1rem;
+}
+
+
+.menu-fixo nav ul li {
+    margin-right: 2rem;
+}
+
+.menu-fixo nav ul li:last-child {
+    margin-right: 0;
+}
+
+
+.menu-fixo nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.menu-fixo nav ul li a:hover,
+.menu-fixo nav ul li a.ativo {
+    color: #ffe8af;
+}
+
+
+body {
+    margin: 0;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    background-color: #111;
+    color: #eee;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.rodape-fixo {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    z-index: 9999;
+    padding: 0.3rem 0.5rem;
+
+}
+
+.rodape-fixo p {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.rodape-fixo a {
+    color: #ffe8af;
+    text-decoration: none;
+}
+
+.rodape-fixo a:hover {
+    text-decoration: underline;
+}
+
+
+body {
+    padding-bottom: 60px;
+}
+
+
+.titulo-pagina,
+.titulo-principal {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: var(--cor-texto);
+}
+
+.titulo-pagina {
+    font-size: 1.6rem;
+    margin: 3rem 0 1.5rem;
+}
+
+.titulo-principal {
+    font-size: 2rem;
+}
+
+
+.hero {
+    width: 100%;
+    min-height: 50vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.hero-texto h1 {
+    font-size: 1.4rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--cor-texto);
+}
+
+
+.apresentacao {
+    padding: 2rem 1rem;
+    background-color: var(--cor-fundo-principal);
+}
+
+.video-section {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.meu-video {
+    display: block;
+    margin: 0 auto;
+
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+
+}
+
+
+.bloco-infos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.info-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1rem;
+}
+
+.imagem-confeiteira img {
+    max-width: 250px;
+    border: 1px solid var(--cor-cinza);
+    border-radius: 6px;
+}
+
+.nome-confeiteira {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: var(--cor-destaque);
+}
+
+.texto-info {
+    flex: 1;
+    min-width: 250px;
+    max-width: 600px;
+    color: var(--cor-texto);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .info-item {
+        flex-direction: column;
+    }
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    margin: 2rem auto;
+    overflow: hidden;
+    border: 1px solid var(--cor-cinza);
+    border-radius: 8px;
+    background-color: #000;
+}
+
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 232, 175, 0.2);
+    color: var(--cor-destaque);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    z-index: 2;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: var(--cor-destaque);
+    color: #000;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+.fade {
+    animation-name: fadeEffect;
+    animation-duration: 1s;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.cardapio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.card-doce {
+    background-color: #1b1b1b;
+    border: 1px solid var(--cor-cinza);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card-doce:hover {
+    transform: scale(1.02);
+}
+
+.doce-titulo {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--cor-destaque);
+    margin-bottom: 0.5rem;
+}
+
+.doce-descricao {
+    font-size: 0.85rem;
+    color: var(--cor-texto);
+    line-height: 1.3;
+    margin-top: 0.5rem;
+}
+
+.card-doce img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+
+.informacoes-texto {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-size: 0.95rem;
+}
+
+.hero2 {
+    display: flex;
+    justify-content: center;
+    background-color: var(--cor-fundo-principal);
+
+}
+
+.hero2 img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.informacoes-texto p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    color: var(--cor-texto);
+}
+
+
+.contato-info {
+    text-align: center;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.btn-contato {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--cor-destaque);
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+.btn-contato img {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.3rem;
+}
+
+.hero3 {
+    display: flex;
+    justify-content: center;
+    background-color: var(--cor-fundo-principal);
+
+}
+
+.hero3 img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.assinatura-logo p {
+    margin-top: 2rem;
+    color: var(--cor-destaque);
+    line-height: 1.2;
+}
+
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-left {
+    animation: slideInLeft 1s ease forwards;
+    opacity: 0;
+}
